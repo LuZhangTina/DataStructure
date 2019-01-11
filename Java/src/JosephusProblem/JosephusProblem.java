@@ -25,20 +25,19 @@ class Node {
 
 class List {
     private Node head;
-    private Node preNode;
-    private Node curNode;
 
     List(int nodeNum){
+        Node preNode;
+        Node curNode;
+
         this.head = new Node(0);
-        this.head.setNextNode(this.head);
-        this.preNode = this.head;
+        preNode = head;
         for (int i = 1; i < nodeNum; i++){
-            this.curNode = new Node(i);
-            this.curNode.setNextNode(this.head);
-            this.preNode.setNextNode(this.curNode);
-            this.preNode = this.curNode;
+            curNode = new Node(i);
+            preNode.setNextNode(curNode);
+            preNode = curNode;
         }
-        this.preNode = this.head;
+        preNode.setNextNode(this.head);
     }
 
     public Node getListHead(){
