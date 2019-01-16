@@ -2,7 +2,7 @@
 
 This algorithm uses LinkedList to implement LRU cache discard problem.
 
-check if the new node is in the list  
+    check if the new node is in the list  
 	if it is in the list  
 		move this node to list head  
 	if it is not in the list  
