@@ -55,6 +55,10 @@ public class LinkedQueue<E> {
         Node<E> node = head;
         head = head.next;
         size--;
+	if (head == null) {
+	    tail = null;
+	}
+
         return node.iteam;
     }
 
